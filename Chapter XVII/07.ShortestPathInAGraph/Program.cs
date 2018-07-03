@@ -10,68 +10,65 @@
     {
         public static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            int[,] matrix = new int[n, n];
-            int currentRow = 0;
-            int currentCol = 0;
-            int iterator = 0;
-            int cnt = 1;
+            int source = int.Parse(Console.ReadLine());
+            int destination = int.Parse(Console.ReadLine());
 
-            while (cnt <= n * n)
-            {
-                while (currentCol < (matrix.GetLength(1) - iterator))
-                {
-                    matrix[currentRow, currentCol] = cnt;
-                    cnt++;
-                    currentCol++;
-                }
+            Graph g = new Graph(10);
 
-                currentCol--;
-                currentRow++;
+            g.AddEdge(0, 1);
+            g.AddEdge(4, 9);
+            g.AddEdge(1, 8);
+            g.AddEdge(1, 7);
+            g.AddEdge(7, 2);
+            g.AddEdge(7, 6);
+            g.AddEdge(1, 4);
+            g.AddEdge(0, 2);
+            g.AddEdge(0, 7);
+            g.AddEdge(7, 4);
 
-                while (currentRow < (matrix.GetLength(0) - iterator))
-                {
-                    matrix[currentRow, currentCol] = cnt;
-                    cnt++;
-                    currentRow++;
-                }
-                currentRow--;
-                currentCol--;
+            List<List<int>> paths = GetAllPaths(g, source, destination, new bool[10], new List<int>(), new List<List<int>>());
 
-                while (currentCol >= (0 + iterator))
-                {
-                    matrix[currentRow, currentCol] = cnt;
-                    cnt++;
-                    currentCol--;
-                }
-                currentCol++;
-                currentRow--;
+            // Print the shortest.
 
-                while (currentRow >= (1 + iterator))
-                {
-                    matrix[currentRow, currentCol] = cnt;
-                    cnt++;
-                    currentRow--;
-                }
+            Console.WriteLine($"Shortest path from {source} to {destination}: "
+                + string.Join(", ", paths.OrderBy(x => x.Count).First()));
 
-                iterator++;
-                currentRow = iterator;
-                currentCol = iterator;
-            }
-
-            Print(matrix);
         }
 
-        private static void Print(int[,] matrix)
+        public static List<List<int>> GetAllPaths(Graph g, int source, int destination, bool[] visited,
+            List<int> path, List<List<int>> paths)
         {
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            if (visited[source])
             {
-                for (int j = 0; j < matrix.GetLength(1); j++)
-                {
-                    Console.Write(matrix[i,j] + " ");
-                }
-                Console.WriteLine();
+                return paths;
             }
+
+            if (source == destination)
+            {
+                // Prevent backtracking from altering the final result.
+                // Yes, I know it's expensive.
+                int[] temp = path.ToArray();
+                List<int> copy = new List<int>(temp);
+                copy.Add(destination);
+                paths.Add(copy.ToList());
+
+                return paths;
+            }
+
+            path.Add(source);
+            visited[source] = true;
+
+            foreach (int adjacentNode in g.GetAdjacentVertices(source))
+            {
+                GetAllPaths(g, adjacentNode, destination, visited, path, paths);
+            }
+
+            path.Remove(source);
+            visited[source] = false;
+
+            return paths;
         }
+
+
     }
 }

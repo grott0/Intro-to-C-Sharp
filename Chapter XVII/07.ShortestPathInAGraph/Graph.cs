@@ -80,7 +80,7 @@ namespace _07.ShortestPathInAGraph
             }
         }
 
-        public void ValidateVertex(int v)
+        private void ValidateVertex(int v)
         {
             if (v < 0 || v >= this.V)
             {
@@ -94,7 +94,7 @@ namespace _07.ShortestPathInAGraph
             this.ValidateVertex(w);
             this.E++;
             adjacencyList[v].AddLast(w);
-            adjacencyList[w].AddLast(v);
+            adjacencyList[w].AddLast(v); // Comment out to create a directed graph.
         }
 
         public LinkedList<int> GetAdjacentVertices(int v)
