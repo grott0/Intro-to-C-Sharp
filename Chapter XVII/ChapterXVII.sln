@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.CheckForBalance", "06.Ch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.ShortestPathInAGraph", "07.ShortestPathInAGraph\07.ShortestPathInAGraph.csproj", "{6D9C51C2-3E61-4890-BBE5-C98A64F77E50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.CheckForCycles", "08.CheckForCycles\08.CheckForCycles.csproj", "{B664FBB9-8E82-4F69-9A70-CD5B9159E209}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{6D9C51C2-3E61-4890-BBE5-C98A64F77E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D9C51C2-3E61-4890-BBE5-C98A64F77E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D9C51C2-3E61-4890-BBE5-C98A64F77E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B664FBB9-8E82-4F69-9A70-CD5B9159E209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B664FBB9-8E82-4F69-9A70-CD5B9159E209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B664FBB9-8E82-4F69-9A70-CD5B9159E209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B664FBB9-8E82-4F69-9A70-CD5B9159E209}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
