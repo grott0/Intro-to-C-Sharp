@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.ShortestPathInAGraph", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.CheckForCycles", "08.CheckForCycles\08.CheckForCycles.csproj", "{B664FBB9-8E82-4F69-9A70-CD5B9159E209}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.DepthFirstSearch", "09.DepthFirstSearch\09.DepthFirstSearch.csproj", "{4E8FDE2C-D650-4578-A356-73E86ABD7DB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{B664FBB9-8E82-4F69-9A70-CD5B9159E209}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B664FBB9-8E82-4F69-9A70-CD5B9159E209}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B664FBB9-8E82-4F69-9A70-CD5B9159E209}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E8FDE2C-D650-4578-A356-73E86ABD7DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E8FDE2C-D650-4578-A356-73E86ABD7DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E8FDE2C-D650-4578-A356-73E86ABD7DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E8FDE2C-D650-4578-A356-73E86ABD7DB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

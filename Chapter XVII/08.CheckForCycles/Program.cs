@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _08.CheckForCycles
 {
@@ -34,9 +32,7 @@ namespace _08.CheckForCycles
             g.AddEdge(2, 5);
             g.AddEdge(2, 8);
 
-
             bool containsCycle = GraphContainsCycle(g1);
-
             Console.WriteLine(containsCycle);
 
 
