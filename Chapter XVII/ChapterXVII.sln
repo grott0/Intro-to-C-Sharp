@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.CheckForCycles", "08.Che
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.DepthFirstSearch", "09.DepthFirstSearch\09.DepthFirstSearch.csproj", "{4E8FDE2C-D650-4578-A356-73E86ABD7DB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.DirectedGraphBreadthFirst", "10.DirectedGraphBreadthFirst\10.DirectedGraphBreadthFirst.csproj", "{E874AA1A-285B-4C89-8A22-6BCB86F51C2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{4E8FDE2C-D650-4578-A356-73E86ABD7DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E8FDE2C-D650-4578-A356-73E86ABD7DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E8FDE2C-D650-4578-A356-73E86ABD7DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E874AA1A-285B-4C89-8A22-6BCB86F51C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E874AA1A-285B-4C89-8A22-6BCB86F51C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E874AA1A-285B-4C89-8A22-6BCB86F51C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E874AA1A-285B-4C89-8A22-6BCB86F51C2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

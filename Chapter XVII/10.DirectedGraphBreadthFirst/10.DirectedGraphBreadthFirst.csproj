@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4E8FDE2C-D650-4578-A356-73E86ABD7DB6}</ProjectGuid>
+    <ProjectGuid>{E874AA1A-285B-4C89-8A22-6BCB86F51C2F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_09.DepthFirstSearch</RootNamespace>
-    <AssemblyName>09.DepthFirstSearch</AssemblyName>
+    <RootNamespace>_10.DirectedGraphBreadthFirst</RootNamespace>
+    <AssemblyName>10.DirectedGraphBreadthFirst</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Graph.cs" />
-    <Compile Include="WeighedGraph.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace _09.DepthFirstSearch
+namespace _10.DirectedGraphBreadthFirst
 {
     public class Graph
     {
@@ -92,7 +92,7 @@ namespace _09.DepthFirstSearch
             this.ValidateVertex(w);
             this.E++;
             adjacencyList[v].AddLast(w);
-            //adjacencyList[w].AddLast(v); // Comment out to create a directed graph.
+            adjacencyList[w].AddLast(v); // Comment out to create a directed graph.
         }
 
         public LinkedList<int> GetAdjacentVertices(int v)
