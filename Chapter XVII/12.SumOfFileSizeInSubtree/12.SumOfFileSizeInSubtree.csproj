@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E874AA1A-285B-4C89-8A22-6BCB86F51C2F}</ProjectGuid>
+    <ProjectGuid>{5122B736-0057-4E0A-B2B2-168AD15F015D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_10.DirectedGraphBreadthFirst</RootNamespace>
-    <AssemblyName>10.DirectedGraphBreadthFirst</AssemblyName>
+    <RootNamespace>_12.SumOfFileSizeInSubtree</RootNamespace>
+    <AssemblyName>12.SumOfFileSizeInSubtree</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Digraph.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

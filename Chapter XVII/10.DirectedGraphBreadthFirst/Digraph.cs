@@ -5,14 +5,14 @@ using System.Text;
 
 namespace _10.DirectedGraphBreadthFirst
 {
-    public class Graph
+    public class Digraph
     {
         public int V { get; private set; }
         public int E { get; private set; }
         private LinkedList<int>[] adjacencyList;
 
 
-        public Graph(int V)
+        public Digraph(int V)
         {
             if (V < 0)
             {
@@ -29,7 +29,7 @@ namespace _10.DirectedGraphBreadthFirst
             }
         }
 
-        public Graph(string filePath)
+        public Digraph(string filePath)
         {
             string[] lines = File.ReadAllLines(filePath);
             int v = int.Parse(lines[0].Trim());
@@ -58,7 +58,7 @@ namespace _10.DirectedGraphBreadthFirst
             }
         }
 
-        public Graph(Graph g) : this(g.V)
+        public Digraph(Digraph g) : this(g.V)
         {
             this.E = g.E;
 

@@ -7,7 +7,7 @@ namespace _10.DirectedGraphBreadthFirst
     {
         static void Main(string[] args)
         {
-            Graph g = new Graph(10);
+            Digraph g = new Digraph(10);
             g.AddEdge(0, 1);
             g.AddEdge(0, 2);
             g.AddEdge(0, 7);
@@ -28,7 +28,7 @@ namespace _10.DirectedGraphBreadthFirst
 
         }
 
-        static void TraverseBreadthFirst(Graph g, bool[] visited, Queue<int> queue)
+        static void TraverseBreadthFirst(Digraph g, bool[] visited, Queue<int> queue)
         {
             int v = queue.Dequeue();
 
@@ -49,7 +49,7 @@ namespace _10.DirectedGraphBreadthFirst
             }
         }
 
-        static void TraverseBreadthFirstLoop(Graph g, bool[] visited, Queue<int> queue)
+        static void TraverseBreadthFirstLoop(Digraph g, bool[] visited, Queue<int> queue)
         {
             while (true)
             {

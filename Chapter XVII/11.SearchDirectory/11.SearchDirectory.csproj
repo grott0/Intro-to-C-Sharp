@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E874AA1A-285B-4C89-8A22-6BCB86F51C2F}</ProjectGuid>
+    <ProjectGuid>{F5198AA1-F3E8-48C4-BD0F-C9CA73FDB4B1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_10.DirectedGraphBreadthFirst</RootNamespace>
-    <AssemblyName>10.DirectedGraphBreadthFirst</AssemblyName>
+    <RootNamespace>_11.SearchDirectory</RootNamespace>
+    <AssemblyName>11.SearchDirectory</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Digraph.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
