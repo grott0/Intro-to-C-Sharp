@@ -99,7 +99,7 @@ namespace _12.SumOfFileSizeInSubtree
             ulong totalFileSize = 0UL;
             GetTotalFileSizeInSubtree(t.Root, ref totalFileSize);
             Console.WriteLine("Total size of the directory: " + totalFileSize + " bytes");
-        }
+        }   
 
         public static void ConstructTree(DirectoryInfo dirInfo, Folder folder)
         {
