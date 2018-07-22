@@ -32,13 +32,13 @@ namespace _08.CheckForCycles
             g.AddEdge(2, 5);
             g.AddEdge(2, 8);
 
-            bool containsCycle = GraphContainsCycle(g1);
+            ///bool containsCycle = GraphContainsCycleMine(g1);
+            bool containsCycle = false;
+            GraphContainsCycleStandard(g1, 0, -1, new bool[g.V], ref containsCycle);
             Console.WriteLine(containsCycle);
-
-
         }
 
-        public static bool GraphContainsCycle(Graph g)
+        public static bool GraphContainsCycleMine(Graph g)
         {
             for (int i = 0; i < g.V; i++)
             {
@@ -97,6 +97,38 @@ namespace _08.CheckForCycles
             visited[source] = false;
             path.Remove(source);
             return paths;
+        }
+
+        public static void GraphContainsCycleStandard(Graph g, int source, int parent,
+            bool[] visited, ref bool containsCycle)
+        {
+            if (containsCycle)
+            {
+                return;
+            }
+
+            if (visited[source])
+            {
+                return;
+            }
+
+            visited[source] = true;
+            var adjacentVertices = g.GetAdjacentVertices(source);
+
+
+            foreach (var adjacentVertex in adjacentVertices)
+            {
+                if (adjacentVertex != parent && visited[adjacentVertex])
+                {
+                    containsCycle = true;
+                    return;
+                }
+            }
+
+            foreach (var adjacentVertex in adjacentVertices)
+            {
+                GraphContainsCycleStandard(g, adjacentVertex, source, visited, ref containsCycle);
+            }
         }
     }
 }
