@@ -30,11 +30,13 @@ namespace _15.WeightedGraphShortestPaths
             int distance = 0;
             int source = 0;
             int destination = 9;
-            GetDistance(wg, -1, source, destination, ref distance, new bool[wg.V], ref foundPath);
+            List<int> path = new List<int>();
+            GetPathAndDistance(wg, 0, source, destination, ref distance, new bool[wg.V], ref foundPath, path);
 
             if (foundPath)
             {
                 Console.WriteLine($"{source} -> {destination} distance: {distance}");
+                Console.WriteLine(string.Join(", ", path));
             }
         }
 
@@ -65,8 +67,9 @@ namespace _15.WeightedGraphShortestPaths
             return path;
         }
 
-        static int GetDistance(WeightedGraph wg, int parent, int current, int destination, ref int distance,
-            bool[] visited, ref bool foundPath)
+        // Searching for the first path we can find. Backtracking is not necessary.
+        static int GetPathAndDistance(WeightedGraph wg, int parent, int current, int destination, ref int distance,
+            bool[] visited, ref bool foundPath, List<int> path)
         {
             if (visited[current] || foundPath)
             {
@@ -76,17 +79,19 @@ namespace _15.WeightedGraphShortestPaths
             if (current == destination)
             {
                 foundPath = true;
+                path.Add(current);
                 return distance;
             }
 
             visited[current] = true;
+            distance += wg.GetEdgeWeight(parent, current);
+            path.Add(current);
 
             foreach (var adjacentVertex in wg.GetAdjacentVertices(current))
             {
                 if (!foundPath)
                 {
-                    distance += wg.GetEdgeWeight(current, adjacentVertex);
-                    GetDistance(wg, current, adjacentVertex, destination, ref distance, visited, ref foundPath);
+                    GetPathAndDistance(wg, current, adjacentVertex, destination, ref distance, visited, ref foundPath, path);
                 }
             }
 

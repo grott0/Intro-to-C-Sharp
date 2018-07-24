@@ -76,13 +76,15 @@ namespace _15.WeightedGraphShortestPaths
             return false;
         }
 
+
+        /// <summary>
+        ///  Gets the weight of an edge.
+        /// </summary>
+        /// <param name="v">Source.</param>
+        /// <param name="w">Destination.</param>
+        /// <returns>The weight of the edge. 0 if the edge does not exist.</returns>
         public int GetEdgeWeight(int v, int w)
         {
-            if (!EdgeExists(v,w))
-            {
-                throw new Exception();
-            }
-
             return this.adjacencyMatrix[v][w];
         }
 

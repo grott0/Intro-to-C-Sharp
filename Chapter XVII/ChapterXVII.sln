@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.GetMaximalSubgraphs", "1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.WeightedGraphShortestPaths", "15.WeightedGraphShortestPaths\15.WeightedGraphShortestPaths.csproj", "{A3CE556C-E971-4336-9135-85B46954B2F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.NTasks", "16.NTasks\16.NTasks.csproj", "{475EAA03-B185-4CC7-B9A6-D4BA9F71636D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{A3CE556C-E971-4336-9135-85B46954B2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3CE556C-E971-4336-9135-85B46954B2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3CE556C-E971-4336-9135-85B46954B2F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{475EAA03-B185-4CC7-B9A6-D4BA9F71636D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{475EAA03-B185-4CC7-B9A6-D4BA9F71636D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{475EAA03-B185-4CC7-B9A6-D4BA9F71636D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{475EAA03-B185-4CC7-B9A6-D4BA9F71636D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
