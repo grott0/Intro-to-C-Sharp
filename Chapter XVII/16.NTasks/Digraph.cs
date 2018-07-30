@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace _13.DigraphFindAllLoops
+namespace _16.NTasks
 {
     public class Digraph
     {

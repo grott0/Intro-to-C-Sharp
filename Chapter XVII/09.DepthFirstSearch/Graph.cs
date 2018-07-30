@@ -92,7 +92,7 @@ namespace _09.DepthFirstSearch
             this.ValidateVertex(w);
             this.E++;
             adjacencyList[v].AddLast(w);
-            //adjacencyList[w].AddLast(v); // Comment out to create a directed graph.
+            adjacencyList[w].AddLast(v); // Comment out to create a directed graph.
         }
 
         public LinkedList<int> GetAdjacentVertices(int v)
