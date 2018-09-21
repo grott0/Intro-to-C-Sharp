@@ -10,44 +10,44 @@ namespace _15.WeightedGraphShortestPaths
     {
         private int[][] adjacencyMatrix;
 
-        public int V { get; private set; }
-        public int E { get; private set; }
+        public int VertexCount { get; private set; }
+        public int EdgeCount { get; private set; }
 
-        public WeightedGraph(int V)
+        public WeightedGraph(int vertexCount)
         {
-            this.V = V;
-            this.E = 0;
-            this.adjacencyMatrix = new int[this.V][];
+            this.VertexCount = vertexCount;
+            this.EdgeCount = 0;
+            this.adjacencyMatrix = new int[this.VertexCount][];
 
-            for (int i = 0; i < adjacencyMatrix.Length; i++)
+            for (int index = 0; index < adjacencyMatrix.Length; index++)
             {
-                adjacencyMatrix[i] = new int[this.V];
+                adjacencyMatrix[index] = new int[this.VertexCount];
             }
         }
 
-        public void AddEdge(int v, int w, int weight)
+        public void AddEdge(int sourceVertex, int destinationVertex, int weight)
         {
-            if (this.adjacencyMatrix[v][w] == 0)
+            if (this.adjacencyMatrix[sourceVertex][destinationVertex] == 0)
             {
-                this.E++;
+                this.EdgeCount++;
             }
 
-            this.adjacencyMatrix[v][w] = weight;
-            this.adjacencyMatrix[w][v] = weight;
+            this.adjacencyMatrix[sourceVertex][destinationVertex] = weight;
+            this.adjacencyMatrix[destinationVertex][sourceVertex] = weight;
         }
 
-        public IEnumerable<int> GetAdjacentVertices(int v)
+        public IEnumerable<int> GetAdjacentVertices(int vertex)
         {
-            if (!VertexIsValid(v))
+            if (!VertexIsValid(vertex))
             {
                 throw new ArgumentOutOfRangeException();
             }
 
             List<int> adjacent = new List<int>();
 
-            for (int i = 0; i < this.adjacencyMatrix[v].Length; i++)
+            for (int i = 0; i < this.adjacencyMatrix[vertex].Length; i++)
             {
-                if (this.adjacencyMatrix[v][i] != 0)
+                if (this.adjacencyMatrix[vertex][i] != 0)
                 {
                     adjacent.Add(i);
                 }
@@ -56,9 +56,9 @@ namespace _15.WeightedGraphShortestPaths
             return adjacent;
         }
 
-        public bool VertexIsValid(int v)
+        public bool VertexIsValid(int vertex)
         {
-            if (v < 0 || v >= this.V)
+            if (vertex < 0 || vertex >= this.VertexCount)
             {
                 return false;
             }
@@ -66,9 +66,9 @@ namespace _15.WeightedGraphShortestPaths
             return true;
         }
 
-        public bool EdgeExists(int v, int w)
+        public bool EdgeExists(int sourceVertex, int destinationVertex)
         {
-            if (this.adjacencyMatrix[v][w] != 0)
+            if (this.adjacencyMatrix[sourceVertex][destinationVertex] != 0)
             {
                 return true;
             }
@@ -80,12 +80,12 @@ namespace _15.WeightedGraphShortestPaths
         /// <summary>
         ///  Gets the weight of an edge.
         /// </summary>
-        /// <param name="v">Source.</param>
-        /// <param name="w">Destination.</param>
+        /// <param name="sourceVertex">Source.</param>
+        /// <param name="destinationVertex">Destination.</param>
         /// <returns>The weight of the edge. 0 if the edge does not exist.</returns>
-        public int GetEdgeWeight(int v, int w)
+        public int GetEdgeWeight(int sourceVertex, int destinationVertex)
         {
-            return this.adjacencyMatrix[v][w];
+            return this.adjacencyMatrix[sourceVertex][destinationVertex];
         }
 
     }
